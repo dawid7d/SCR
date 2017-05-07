@@ -1,0 +1,138 @@
+ 
+ 	Program wykonuje szeregowania procesów o kodach:
+
+ 0 - strategia FCFS
+ 2 - strategia SRTF
+ 3 - strategia RR
+ 5 - szeregowanie priorytetowe z wyw³aszczaniem, zadania o takich samych priorytetach szeregowane algorytmem SRTF
+
+ Program daje poprawne wyniki metod¹ krokow¹, tylko w pliku z danymi wejœciowymi nie mo¿e byæ wolnej spacji na koñcu ka¿dej linijki.
+ 
+
+
+	przyk³adowe wywo³ania programu:
+
+ msi@ubuntu:~/zad_10$ ./a.out 0 2 2 < plik.txt 
+
+ kod algorytmu: 0
+ liczba procesow: 2
+ kwant czasu: 2
+
+ 0. strategia FCFS 
+
+ 0  1 2
+ 1  1 2
+ 2  1 2
+ 3  1 2
+ 4  3 2
+ 5  3 4
+ 6  5 6
+ 7  5 6
+ 8  5 7
+ 9  5 7
+ 10  5 7
+ 11  5 7
+ 12  8 7
+ 13  8-1
+ 14  8-1
+ 15  8-1
+msi@ubuntu:~/zad_10$ ./a.out 2 2 2 < plik.txt 
+
+ kod algorytmu: 2
+ liczba procesow: 2
+ kwant czasu: 2
+
+ 2. strategia RSTF 
+
+ 0  3 1
+ 1  3 1
+ 2  4 1
+ 3  2 1
+ 4  2-1
+ 5  2-1
+ 6  2 6
+ 7  2 6
+ 8  8 7
+ 9  8 7
+ 10  8 7
+ 11  8 7
+ 12  5 7
+ 13  5-1
+ 14  5-1
+ 15  5-1
+ 16  5-1
+ 17  5-1
+msi@ubuntu:~/zad_10$ ./a.out 3 2 2 < plik.txt 
+
+ kod algorytmu: 3
+ liczba procesow: 2
+ kwant czasu: 2
+
+ 3. strategia RR 
+
+ 0  1 2
+ 1  1 2
+ 2  3 4
+ 3  3 1
+ 4  2 1
+ 5  2-1
+ 6  2 5
+ 7  6 5
+ 8  6 5
+ 9  7 8
+ 10  7 8
+ 11  5 7
+ 12  5 7
+ 13  8 5
+ 14  8 7
+msi@ubuntu:~/zad_10$ ./a.out 5 2 2 < plik.txt 
+
+ kod algorytmu: 5
+ liczba procesow: 2
+ kwant czasu: 2
+
+ 5. szeregowanie priorytetowe (RSTF)
+
+ 0  2 3
+ 1  2 3
+ 2  2 4
+ 3  2 1
+ 4  2 1
+ 5 -1 1
+ 6  5 1
+ 7  5 7
+ 8  8 7
+ 9  8 7
+ 10  8 7
+ 11  8 7
+ 12  5 6
+ 13  5 6
+ 14  5-1
+ 15  5-1
+
+================================================================= plik.txt =============================================
+0 1 4 4 2 0 5 3 1 2
+1 4 0 1
+2
+3
+4
+5
+6 5 2 6 6 6 2
+7 7 0 5
+8 8 1 4
+9
+10
+11
+12
+13
+========================================================================================================================
+
+
+
+
+
+
+
+
+
+

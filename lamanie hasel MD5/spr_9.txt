@@ -1,0 +1,28 @@
+
+	Program do ³amania hase³ najpierw wczytuje slownik na który alokuje dunamicznie pamiêæ, domyslnie "slownik.txt".
+	nastêpnie wczytue plik z haslami, domyslnie "hasla.txt".
+
+	W programie zastosowano 5 w¹tków: 3 konsumntów jednowyrazowych (z kombinacjami liczbowymi przed i po slowie),
+	jeden watek producenta dwu wyrazowego (te¿ z liczbami po i przed) oraz konsumenta, który informuje o znalezieniu 
+	hasla, wypisuje je, odznacza oraz przechwytuje sugna³ SIGHUP.
+
+	przyk³adowe wywo³anie programu :
+	
+	msi@ubuntu:~/zad_9$ g++ -std=c++11 -pthread zad9.cpp -lcrypto
+	msi@ubuntu:~/zad_9$ ./a.out
+
+ 	liczba wyrazow w slowniku: 564
+	liczba wczytanych hasel: 16
+
+	zlamano haslo: bbb8ffa46bf17e0c79bf37b82f927ae6 haslo to: acourceethers
+	zlamano haslo: d382b7cd7c8414fe9900bc4f279c13e5 haslo to: abadrabpype
+	zlamano haslo: 3fe26bf96f02a9aa7ebda979a7de3b4a haslo to: Accichfueve
+	zlamano haslo: 7f90571bca5e0e6eb7ae0ab6d9012b7d haslo to: CHAIR
+	zlamano haslo: c30a56d8f8e5de494449eeb1d2d846d4 haslo to: chair1
+	zlamano haslo: 9dea0c41b29ad63a9b315e8452ee637c haslo to: CHAIR1
+ 	zlamano haslo: 52c706fc23e9a774488139ce01ae5690 haslo to: 4CD
+ 	zlamano haslo: 5166906b4f69ecac59821b95691bb43c haslo to: 12CHAIR
+ 	zlamano haslo: 66680e316747e0890a5dbcabd48af77a haslo to: accentbe left over
+	^CInterrupt signal (2) received.
+	msi@ubuntu:~/zad_9$ 
+ 
